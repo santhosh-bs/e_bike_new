@@ -13,10 +13,12 @@ import IconButton from '@mui/material/IconButton'
 import CardContent from '@mui/material/CardContent'
 import CardActions from '@mui/material/CardActions'
 import Grid, { GridProps } from '@mui/material/Grid'
+import QRCode from 'qrcode.react'
+import { RWebShare } from 'react-web-share' //To share website link via other apps
 
 // ** Icons Imports
 import Twitter from 'mdi-material-ui/Twitter'
-import CartPlus from 'mdi-material-ui/CartPlus'
+// import CartPlus from 'mdi-material-ui/CartPlus'
 import Facebook from 'mdi-material-ui/Facebook'
 import Linkedin from 'mdi-material-ui/Linkedin'
 import GooglePlus from 'mdi-material-ui/GooglePlus'
@@ -47,13 +49,32 @@ const CardMobile = () => {
   const handleClose = () => {
     setAnchorEl(null)
   }
+  const downloadQRCode = () => {
+    //-----Download QRCode function------//
+    const canvas = document.getElementById('qr-gen')
+    const pngUrl = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream')
+    let downloadLink = document.createElement('a')
+    downloadLink.href = pngUrl
+    downloadLink.download = `Green-Pyora.png`
+    document.body.appendChild(downloadLink)
+    downloadLink.click()
+    document.body.removeChild(downloadLink)
+  }
 
   return (
     <Card>
       <Grid container spacing={6}>
         <StyledGrid item md={5} xs={12}>
           <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img width={137} height={176} alt='Apple iPhone 11 Pro' src='/images/cards/iPhone-11-pro.png' />
+            <div>
+              <QRCode
+                id='qr-gen'
+                value='https://green-pyora.netlify.app/'
+                size={100}
+                level={'H'}
+                includeMargin={true}
+              />
+            </div>
           </CardContent>
         </StyledGrid>
         <Grid
@@ -67,34 +88,38 @@ const CardMobile = () => {
         >
           <CardContent>
             <Typography variant='h6' sx={{ marginBottom: 2 }}>
-              Apple iPhone 11 Pro
+              Green-Pyora QR Code
             </Typography>
             <Typography variant='body2' sx={{ marginBottom: 3.5 }}>
-              Apple iPhone 11 Pro smartphone. Announced Sep 2019. Features 5.8″ display Apple A13 Bionic
+              scan or download to share this e-bike website
             </Typography>
-            <Typography sx={{ fontWeight: 500, marginBottom: 3 }}>
-              Price:{' '}
-              <Box component='span' sx={{ fontWeight: 'bold' }}>
-                $899
-              </Box>
-            </Typography>
+            <Typography sx={{ fontWeight: 'bold', marginBottom: 3 }}>Click Download QR image below </Typography>
           </CardContent>
           <CardActions className='card-action-dense'>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-              <Button>
-                <CartPlus fontSize='small' sx={{ marginRight: 2 }} />
-                Add to Card
+              <Button variant='contained' onClick={downloadQRCode} variant='contained'>
+                {/* <CartPlus fontSize='small' sx={{ marginRight: 2 }} /> */}
+                Download QR image &#x2B73;
               </Button>
-              <IconButton
-                id='long-button'
-                aria-label='share'
-                aria-haspopup='true'
-                onClick={handleClick}
-                aria-controls='long-menu'
-                aria-expanded={open ? 'true' : undefined}
+              <RWebShare
+                data={{
+                  text: 'Green_Pyora',
+                  url: 'https://green-pyora.netlify.app/',
+                  title: 'Green Pyora'
+                }}
+                onClick={() => console.log('shared successfully!')}
               >
-                <ShareVariant fontSize='small' />
-              </IconButton>
+                <IconButton
+                  id='long-button'
+                  aria-label='share'
+                  aria-haspopup='true'
+                  onClick={handleClick}
+                  aria-controls='long-menu'
+                  aria-expanded={open ? 'true' : undefined}
+                >
+                  <ShareVariant fontSize='small' />
+                </IconButton>
+              </RWebShare>
               <Menu
                 open={open}
                 id='long-menu'

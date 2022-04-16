@@ -6,7 +6,10 @@ import Link from 'next/link'
 
 // ** MUI Imports
 import Box, { BoxProps } from '@mui/material/Box'
-import { styled, useTheme } from '@mui/material/styles'
+import {
+  styled
+  // ,useTheme
+} from '@mui/material/styles'
 import Typography, { TypographyProps } from '@mui/material/Typography'
 
 // ** Type Import
@@ -52,7 +55,7 @@ const VerticalNavHeader = (props: Props) => {
   const { verticalNavMenuBranding: userVerticalNavMenuBranding } = props
 
   // ** Hooks
-  const theme = useTheme()
+  // const theme = useTheme()
 
   return (
     <MenuHeaderWrapper className='nav-header' sx={{ pl: 6 }}>
@@ -61,7 +64,7 @@ const VerticalNavHeader = (props: Props) => {
       ) : (
         <Link href='/' passHref>
           <StyledLink>
-            <svg
+            {/* <svg
               width={30}
               height={25}
               version='1.1'
@@ -119,7 +122,8 @@ const VerticalNavHeader = (props: Props) => {
                   </g>
                 </g>
               </g>
-            </svg>
+            </svg> */}
+            <img alt='GreenPyora-logo' src='/images/charge-icon.png' width={30} height={25} />
             <HeaderTitle variant='h6' sx={{ ml: 3 }}>
               {themeConfig.templateName}
             </HeaderTitle>
