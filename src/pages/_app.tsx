@@ -65,8 +65,9 @@ const App = (props: ExtendedAppProps) => {
         <meta name='description' content={`${themeConfig.templateName}`} />
         <meta name='keywords' content='e_bike, eco-friendly' />
         <meta name='viewport' content='initial-scale=1, width=device-width' />
+        <link rel='charge-icon' sizes='180x180' href='/images/charge-icon.png' />
+        <link rel='shortcut icon' href='/images/charge-icon.png' />
       </Head>
-
       <SettingsProvider>
         <SettingsConsumer>
           {({ settings }) => {
