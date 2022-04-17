@@ -73,7 +73,7 @@ const CardMobile = () => {
                 // @ts-ignore
                 id='qr-gen'
                 value='https://green-pyora.netlify.app/'
-                size={200}
+                size={175}
                 level={'H'}
                 includeMargin={true}
               />

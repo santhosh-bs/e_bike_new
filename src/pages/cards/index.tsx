@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 
 // ** Demo Components Imports
-import CardUser from 'src/views/cards/CardUser'
+import CardUser from 'src/views/cards/CardUser5'
 import CardImgTop from 'src/views/cards/CardImgTop'
 import CardMobile from 'src/views/cards/CardMobile'
 import CardSupport from 'src/views/cards/CardSupport'
