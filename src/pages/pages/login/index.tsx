@@ -68,7 +68,7 @@ const LoginPage = () => {
     password: '',
     showPassword: false
   })
-  // const theme = useTheme()
+
   const router = useRouter()
 
   const handleChange = (prop: keyof State) => (event: ChangeEvent<HTMLInputElement>) => {

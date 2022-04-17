@@ -69,7 +69,6 @@ const RegisterPage = () => {
     password: '',
     showPassword: false
   })
-  // const theme = useTheme()
 
   const handleChange = (prop: keyof State) => (event: ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [prop]: event.target.value })
