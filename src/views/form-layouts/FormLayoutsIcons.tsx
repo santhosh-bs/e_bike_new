@@ -16,15 +16,19 @@ import MessageOutline from 'mdi-material-ui/MessageOutline'
 const FormLayoutsIcons = () => {
   return (
     <Card>
-      <CardHeader title='Basic with Icons' titleTypographyProps={{ variant: 'h6' }} />
+      <CardHeader title='Send us your queries' titleTypographyProps={{ variant: 'h6' }} />
       <CardContent>
-        <form onSubmit={e => e.preventDefault()}>
+        <form
+          method='POST'
+          data-netlify='true'
+          // onSubmit={e => e.preventDefault()}
+        >
           <Grid container spacing={5}>
             <Grid item xs={12}>
               <TextField
                 fullWidth
                 label='Full Name'
-                placeholder='Leonard Carter'
+                placeholder='Full Name'
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position='start'>
@@ -39,8 +43,8 @@ const FormLayoutsIcons = () => {
                 fullWidth
                 type='email'
                 label='Email'
-                placeholder='carterleonard@gmail.com'
-                helperText='You can use letters, numbers & periods'
+                placeholder='@gmail.com'
+                helperText='You can use letters, numbers &#38; periods'
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position='start'>
@@ -55,7 +59,7 @@ const FormLayoutsIcons = () => {
                 fullWidth
                 type='number'
                 label='Phone No.'
-                placeholder='+1-123-456-8790'
+                placeholder='Contact Number'
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position='start'>
@@ -71,7 +75,7 @@ const FormLayoutsIcons = () => {
                 multiline
                 minRows={3}
                 label='Message'
-                placeholder='Bio...'
+                placeholder='Enter your queries here..'
                 sx={{ '& .MuiOutlinedInput-root': { alignItems: 'baseline' } }}
                 InputProps={{
                   startAdornment: (
