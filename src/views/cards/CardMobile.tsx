@@ -51,7 +51,9 @@ const CardMobile = () => {
   }
   const downloadQRCode = () => {
     //-----Download QRCode function------//
+    // @ts-ignore
     const canvas = document.getElementById('qr-gen')
+    // @ts-ignore
     const pngUrl = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream')
     let downloadLink = document.createElement('a')
     downloadLink.href = pngUrl
@@ -68,9 +70,10 @@ const CardMobile = () => {
           <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div>
               <QRCode
+                // @ts-ignore
                 id='qr-gen'
                 value='https://green-pyora.netlify.app/'
-                size={100}
+                size={200}
                 level={'H'}
                 includeMargin={true}
               />
@@ -97,7 +100,7 @@ const CardMobile = () => {
           </CardContent>
           <CardActions className='card-action-dense'>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-              <Button variant='contained' onClick={downloadQRCode} variant='contained'>
+              <Button variant='contained' onClick={downloadQRCode}>
                 {/* <CartPlus fontSize='small' sx={{ marginRight: 2 }} /> */}
                 Download QR image &#x2B73;
               </Button>

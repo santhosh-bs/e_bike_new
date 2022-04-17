@@ -88,7 +88,7 @@ const RegisterPage = () => {
       <Card sx={{ zIndex: 1 }}>
         <CardContent sx={{ padding: theme => `${theme.spacing(12, 9, 7)} !important` }}>
           <Box sx={{ mb: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <svg
+            {/* <svg
               width={35}
               height={29}
               version='1.1'
@@ -146,7 +146,8 @@ const RegisterPage = () => {
                   </g>
                 </g>
               </g>
-            </svg>
+            </svg> */}
+            <img alt='GreenPyora-logo' src='/images/charge-icon.png' width={30} height={25} />
             <Typography
               variant='h6'
               sx={{
