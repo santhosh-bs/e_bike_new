@@ -2,7 +2,7 @@
 import Box, { BoxProps } from '@mui/material/Box'
 import Card from '@mui/material/Card'
 // import Button from '@mui/material/Button'
-import Avatar from '@mui/material/Avatar'
+// import Avatar from '@mui/material/Avatar'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
@@ -37,18 +37,19 @@ const CardUser = () => {
   return (
     <Card>
       <CardMedia sx={{ height: '12.625rem' }} image='/images/cards/background-user.png' />
-      <Avatar
+      {/* <Avatar
         alt='Nimesh'
         src='/images/avatars/1.png'
         sx={{
-          width: 75,
-          height: 75,
-          left: '1.313rem',
-          top: '10.28125rem',
-          position: 'absolute',
+          width: 150,
+          height: 150,
+          left: '5.5rem',
+          top: '-4.58125rem',
+          zIndex: '50',
+          position: 'relative',
           border: theme => `0.25rem solid ${theme.palette.common.white}`
         }}
-      />
+      /> */}
       <CardContent>
         <Box
           sx={{
@@ -57,6 +58,7 @@ const CardUser = () => {
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
+            top: '3.28125rem',
             justifyContent: 'space-between'
           }}
         >
