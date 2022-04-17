@@ -72,8 +72,6 @@ const RegisterPage = () => {
     password: '',
     showPassword: false
   })
-
-  // ** Hook
   // const theme = useTheme()
 
   const handleChange = (prop: keyof State) => (event: ChangeEvent<HTMLInputElement>) => {

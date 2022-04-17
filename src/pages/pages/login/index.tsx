@@ -71,8 +71,6 @@ const LoginPage = () => {
     password: '',
     showPassword: false
   })
-
-  // ** Hook
   // const theme = useTheme()
   const router = useRouter()
 
