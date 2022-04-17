@@ -19,10 +19,12 @@ const FormLayoutsIcons = () => {
       <CardHeader title='Send us your queries' titleTypographyProps={{ variant: 'h6' }} />
       <CardContent>
         <form
-          method='POST'
+          name='Queries from Green Pyora'
+          method='post'
           data-netlify='true'
           // onSubmit={e => e.preventDefault()}
         >
+          <input type='hidden' name='form1' value='Queries from Green Pyora' />
           <Grid container spacing={5}>
             <Grid item xs={12}>
               <TextField
