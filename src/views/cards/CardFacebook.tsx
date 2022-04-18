@@ -19,17 +19,16 @@ const CardFacebook = () => {
           sx={{ display: 'flex', marginBottom: 2.75, alignItems: 'center', color: 'common.white' }}
         >
           <Facebook sx={{ marginRight: 2.5 }} />
-          Facebook Card
+          Facebook 
         </Typography>
         <Typography variant='body2' sx={{ marginBottom: 3, color: 'common.white' }}>
-          You’ve read about the importance of being courageous, rebellious and imaginative. These are all vital
-          ingredients in an effective.
+          comment..
         </Typography>
         <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
             <Avatar alt='Eugene Clarke' src='/images/avatars/1.png' sx={{ width: 34, height: 34, marginRight: 2.75 }} />
             <Typography variant='body2' sx={{ color: 'common.white' }}>
-              Eugene Clarke
+              Name2
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
