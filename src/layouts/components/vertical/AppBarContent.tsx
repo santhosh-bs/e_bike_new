@@ -20,7 +20,7 @@ import UserDropdown from 'src/@core/layouts/components/shared-components/UserDro
 import NotificationDropdown from 'src/@core/layouts/components/shared-components/NotificationDropdown'
 import Link from 'next/link'
 import themeConfig from 'src/configs/themeConfig'
-import Box, { BoxProps } from '@mui/material/Box'
+import Box from '@mui/material/Box'
 
 // ** Styled Components
 // const MenuHeaderWrapper = styled(Box)<BoxProps>(({ theme }) => ({
@@ -105,7 +105,7 @@ const AppBarContent = (props: Props) => {
         )}
         <ModeToggler settings={settings} saveSettings={saveSettings} />
         <NotificationDropdown />
-        <UserDropdown />
+        {/* <UserDropdown /> */}
       </Box>
     </Box>
     // </Box>
