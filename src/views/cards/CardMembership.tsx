@@ -1,7 +1,6 @@
 // ** MUI Imports
 import Card from '@mui/material/Card'
 import Grid from '@mui/material/Grid'
-import Button from '@mui/material/Button'
 import Divider from '@mui/material/Divider'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
@@ -28,13 +27,12 @@ const CardMembership = () => {
         <Grid item xs={12} sm={7}>
           <CardContent sx={{ padding: theme => `${theme.spacing(3.25, 5.75, 6.25)} !important` }}>
             <Typography variant='h6' sx={{ marginBottom: 3.5 }}>
-              Lifetime Membership
+              Special feature
             </Typography>
             <Typography variant='body2'>
-              Here, I focus on a range of items and features that we use in life without giving them a second thought
-              such as Coca Cola, body muscles and holding ones own breath. Though, most of these notes are not
-              fundamentally necessary, they are such that you can use them for a good laugh, at a drinks party or for
-              picking up women or men.
+              Comment..Pudding tiramisu caramels. Gingerbread gummies danish chocolate bar toffee marzipan. Wafer wafer
+              cake powder danish oat cake.Pudding tiramisu caramels. Gingerbread gummies danish chocolate bar toffee
+              marzipan. Wafer wafer cake powder danish oat cake.
             </Typography>
             <Divider sx={{ marginTop: 6.5, marginBottom: 6.75 }} />
             <Grid container spacing={4}>
@@ -46,7 +44,7 @@ const CardMembership = () => {
                   </Box>
                   <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <AccountOutline sx={{ color: 'primary.main', marginRight: 2.75 }} fontSize='small' />
-                    <Typography variant='body2'>15 Members</Typography>
+                    <Typography variant='body2'>Members</Typography>
                   </Box>
                 </StyledBox>
               </Grid>
@@ -82,17 +80,17 @@ const CardMembership = () => {
           >
             <Box>
               <Box sx={{ mb: 3.5, display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
-                <Typography variant='h6'>$</Typography>
+                {/* <Typography variant='h6'>$</Typography> */}
                 <Typography variant='h6' sx={{ lineHeight: 1, fontWeight: 600, fontSize: '3.75rem !important' }}>
-                  899
+                  IMAGE
                 </Typography>
-                <Typography variant='h6'>USD</Typography>
+                {/* <Typography variant='h6'>USD</Typography> */}
               </Box>
-              <Typography variant='body2' sx={{ mb: 13.75, display: 'flex', flexDirection: 'column' }}>
+              {/* <Typography variant='body2' sx={{ mb: 13.75, display: 'flex', flexDirection: 'column' }}>
                 <span>5 Tips For Offshore</span>
                 <span>Software Development</span>
-              </Typography>
-              <Button variant='contained'>Contact Now</Button>
+              </Typography> */}
+              {/* <Button variant='contained'>Contact Now</Button> */}
             </Box>
           </CardContent>
         </Grid>

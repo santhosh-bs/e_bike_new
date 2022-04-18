@@ -19,17 +19,16 @@ const CardLinkedIn = () => {
           sx={{ display: 'flex', marginBottom: 2.75, alignItems: 'center', color: 'common.white' }}
         >
           <Linkedin sx={{ marginRight: 2.5 }} />
-          LinkedIn Card
+          LinkedIn
         </Typography>
         <Typography variant='body2' sx={{ marginBottom: 3, color: 'common.white' }}>
-          With the Internet spreading like wildfire and reaching every part of our daily life, more and more traffic is
-          directed.
+          Comment...
         </Typography>
         <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
             <Avatar alt='Anne Burke' src='/images/avatars/8.png' sx={{ width: 34, height: 34, marginRight: 2.75 }} />
             <Typography variant='body2' sx={{ color: 'common.white' }}>
-              Anne Burke
+              Name3
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>

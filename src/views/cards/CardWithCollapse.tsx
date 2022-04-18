@@ -30,11 +30,9 @@ const CardWithCollapse = () => {
       <CardMedia sx={{ height: '14.5625rem' }} image='/images/cards/paper-boat.png' />
       <CardContent>
         <Typography variant='h6' sx={{ marginBottom: 2 }}>
-          Popular Uses Of The Internet
+          Specifications
         </Typography>
-        <Typography variant='body2'>
-          Although cards can support multiple actions, UI controls, and an overflow menu.
-        </Typography>
+        <Typography variant='body2'>Description....</Typography>
       </CardContent>
       <CardActions className='card-action-dense'>
         <Box
@@ -54,12 +52,7 @@ const CardWithCollapse = () => {
       <Collapse in={collapse}>
         <Divider sx={{ margin: 0 }} />
         <CardContent>
-          <Typography variant='body2'>
-            I&prime;m a thing. But, like most politicians, he promised more than he could deliver. You won&prime;t have
-            time for sleeping, soldier, not with all the bed making you&prime;ll be doing. Then we&prime;ll go with that
-            data file! Hey, you add a one and two zeros to that or we walk! You&prime;re going to do his laundry?
-            I&prime;ve got to find a way to escape.
-          </Typography>
+          <Typography variant='body2'>Description...</Typography>
         </CardContent>
       </Collapse>
     </Card>

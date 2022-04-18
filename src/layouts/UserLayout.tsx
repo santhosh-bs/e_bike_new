@@ -14,7 +14,8 @@ import VerticalLayout from 'src/@core/layouts/VerticalLayout'
 import VerticalNavItems from 'src/navigation/vertical'
 
 // ** Component Import
-import UpgradeToProButton from './components/UpgradeToProButton'
+// import UpgradeToProButton from './components/UpgradeToProButton'
+
 import VerticalAppBarContent from './components/vertical/AppBarContent'
 
 // ** Hook Import
@@ -38,13 +39,13 @@ const UserLayout = ({ children }: Props) => {
    */
   const hidden = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'))
 
-  const UpgradeToProImg = () => {
-    return (
-      <Box sx={{ mx: 'auto', marginRight: 'auto' }}>
-        <img width={100} alt='Green-Pyora' src={`/images/charge-icon.png`} />
-      </Box>
-    )
-  }
+  // const UpgradeToProImg = () => {
+  //   return (
+  //     <Box sx={{ mx: 'auto', marginRight: 'auto' }}>
+  //       <img width={100} alt='Green-Pyora' src={`/images/charge-icon.png`} />
+  //     </Box>
+  //   )
+  // }
 
   return (
     <VerticalLayout
@@ -52,7 +53,6 @@ const UserLayout = ({ children }: Props) => {
       settings={settings}
       saveSettings={saveSettings}
       verticalNavItems={VerticalNavItems()} // Navigation Items
-      afterVerticalNavMenuContent={UpgradeToProImg}
       verticalAppBarContent={(
         props // AppBar Content
       ) => (
@@ -65,7 +65,7 @@ const UserLayout = ({ children }: Props) => {
       )}
     >
       {children}
-      <UpgradeToProButton />
+      {/* <UpgradeToProButton /> */}
     </VerticalLayout>
   )
 }
